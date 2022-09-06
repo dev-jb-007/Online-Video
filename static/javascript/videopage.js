@@ -9,8 +9,9 @@ getMovie();
 async function getMovie(){
     let idarray=window.location.href.split('/');
     let id=idarray[idarray.length-1];
-    const buffer=await fetch(`https://imdb-api.com/en/API/Title/k_9l7794ak/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia`);
+    const buffer=await fetch(`https://imdb-api.com/en/API/Title/k_x27qyalf/${id}/FullActor,FullCast,Posters,Images,Trailer,Ratings,Wikipedia`);
     const answer=await buffer.json();
+    document.getElementById('main-heading').innerHTML=answer.title;
     console.log(answer);
     displayMovie(answer);
     
@@ -30,7 +31,7 @@ function displayMovie(answer){
     getRecommandation(answer.title);
 }
 async function getRecommandation(name){
-    const buffer=await fetch(`https://imdb-api.com/en/API/SearchMovie/k_9l7794ak/${name}`);
+    const buffer=await fetch(`https://imdb-api.com/en/API/SearchMovie/k_x27qyalf/${name}`);
     const answer=await buffer.json();
     const div=document.getElementById('#recommendation');
     let html=``;

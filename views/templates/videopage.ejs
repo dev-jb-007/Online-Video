@@ -15,20 +15,15 @@
 
 <body style="background: var(--bs-gray-900);">
     <nav class="navbar navbar-dark navbar-expand-md textdark bg-dark text-dark navigation-clean-search">
-        <div class="container"><a class="navbar-brand link-light" href="#" style="color: var(--bs-light);">DMmovies</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand link-light" href="/" style="color: var(--bs-light);">DMmovies</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" href="#">Link 1</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link 2</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Link 3</a></li>
-                </ul>
                 <form class="me-auto search-form" target="_self">
                     <div class="d-flex align-items-center"><label class="form-label d-flex mb-0" for="search-field"><i onclick="searchInput()" class="fa fa-search"></i></label><input class="form-control search-field" id="search-bar"  style="color:white;border-bottom: 2px solid gray;" type="search" id="search-field" name="search"></div>
                 </form><a class="btn btn-light action-button" role="button" href="#">Action </a>
             </div>
         </div>
     </nav>
-    <h1 style="background: var(--bs-gray-900);margin-bottom: 0px;color: var(--bs-light);text-align: center;">Red Notice</h1>
+    <h1 style="background: var(--bs-gray-900);margin-bottom: 0px;color: var(--bs-light);text-align: center;" id="main-heading"></h1>
     <!-- <div id="main-movie" class="text-center text-dark bg-dark border rounded-0 border-secondary" style="color: rgb(18,96,174);height:800px;width: 100%;margin: 0px;background: var(--bs-red);"> -->
         <iframe id="iframe-main" width="100%" height="900px" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true"
         mozallowfullscreen="true"></iframe>

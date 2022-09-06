@@ -1,8 +1,9 @@
 async function getResults(){
     let title=window.location.href.split('/')[4];
     console.log(title);
+    title=title.replace(/%20/g," ");
     document.getElementById('search-result-display').innerHTML=`Search Result :-${title}`;
-    const buffer=await fetch(`https://imdb-api.com/en/API/SearchMovie/k_9l7794ak/${title}`);
+    const buffer=await fetch(`https://imdb-api.com/en/API/SearchMovie/k_x27qyalf/${title}`);
     const answer=await buffer.json();
     console.log(answer);
     displayResult(answer);
